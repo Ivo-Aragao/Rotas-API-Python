@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Produtos</title>
+</head>
+<body>
+    <h1>Lista de Produtos</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Preço Unitário</th>
+            <th>Valor Total</th>
+            <th>Editar produto</th>
+            <th>Excluir produto</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task['id'] }}</td>
+            <td>{{ task['nome'] }}</td>
+            <td>{{ task['quantidade'] }}</td>
+            <td>{{ task['preco'] }}</td>
+            <td>{{ task['quantidade'] * task['preco'] }}</td>
+            <td><a href="/editar-produto/{{ task['id'] }}">Editar</a></td>
+            <td><a href="/excluir-produto/{{ task['id'] }}">Excluir</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div>
+        Valor total dos produtos: R$ {{ total }}
+    </div>
+    <br><a href="/adicionar_produto">Adicionar produto</a>
+</body>
+</html>

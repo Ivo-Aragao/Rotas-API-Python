@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Produto</title>
+</head>
+<body>
+    <h1>Editar Produto</h1>
+    <form method="post" action="/editar-produto/{{ task['id'] }}">
+        <input type="text" name="produto" placeholder="Digite o produto:" value="{{ task['nome'] }}" required>
+        <input type="number" step="any" name="quantidade" id="quantidade" placeholder="Digite a quantidade:" min="0" value="{{ task['quantidade'] }}" required>
+        <input type="number" step="any" name="preco" id="preco" placeholder="Digite o preço unitário:" min="0" value="{{ task['preco'] }}" required>
+        <input type="submit" value="Salvar">
+    </form>
+</body>
+</html>

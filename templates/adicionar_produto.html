@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adicionar produto</title>
+</head>
+<body>
+    <h1>Adicionar produto</h1>
+    <form method="post" action="/adicionar_produto">
+        <input type="text" name="produto" placeholder="Digite o produto:" required>
+        <input type="number" step="any" name="quantidade" id="quantidade" placeholder="Digite a quantidade:" min="0" required>
+        <input type="number" step="any" name="preco" id="preco" placeholder="Digite o preço unitário:" min="0" required>
+        <input type="submit" value="Adicionar">
+    </form>
+</body>
+</html>
